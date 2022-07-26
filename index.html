@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <div class="row" style="text-align: center;">
+        <div class="col" id="logo"><img class="bounce animated" id="imglogo" src="assets/img/Pokédex_logo.png"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col" id="pokedex1"><img src="assets/img/bluebtn.png"><img src="assets/img/btns.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col" id="frame1"><img id="frame1" src="assets/img/frame%201.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="search" id="aquivaelbuscador" placeholder="Search Pokemon" autofocus="on" autocomplete="on">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" id="ImagenPokemon">
+                        <img id="aquivaelpoke" src="assets/img/pokeimg.png" alt="Loading...">
+                    </div>
+                </div>
+                <div class="row text-nowrap d-xxl-flex align-items-xxl-center infopoke">
+                    <div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-3 col-xxl-3 text-nowrap" id="IdPokemon">
+                        <p id="aquivaelid">00</p>
+                    </div>
+                    <div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-9 col-xxl-9 text-nowrap" id="NombrePokemon">
+                        <p id="aquivaelnombre">Cargando...</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center" id="BotonesPokemon">
+                        <img data-bss-hover-animate="pulse" id="botonizq" onclick="atras()" src="assets/img/leftbtn.png">
+                        <img data-bss-hover-animate="pulse" id="botoncentral" onclick="randombtn()" src="assets/img/ctrbtn.png">
+                        <img data-bss-hover-animate="pulse" id="botonder" onclick="siguiente()" src="assets/img/rightbtn.png">
+                    </div>
+                </div>
+            </div>
+            <div id="colcentral" class="col-xl-1 col-xxl-1 offset-xxl-0">
+                <div class="row central1"></div>
+                <div class="row central2"></div>
+                <div class="row central3"></div>
+            </div>
+            <div class="col ladoder">
+                <div class="row empty"></div>
+                <div class="row">
+                    <div class="col" id="frame2"><img id="frame2" src="assets/img/frame%202.png"></div>
+                </div>
+                <div class="row row1">
+                    <div class="col text-nowrap d-flex d-sm-flex d-md-flex d-lg-flex d-xxl-flex flex-shrink-1 justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" id="botones">
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn1" type="button" onclick="abilities()">Abilities</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn2" type="button" onclick="stats()">Stats</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn3" type="button" onclick="types()">Type</button>
+                        <button class="btn btn-primary text-truncate buttons" id="aquivabtn4" type="button" onclick="expbase()">Base Exp</button>
+                    </div>
+                </div>
+                <div id="abilities">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="InfoPokemon1">
+                        <p id="aquivalainfo1" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="InfoPokemon2">
+                        <p id="aquivalainfo2" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="InfoPokemon3">
+                        <p id="aquivalainfo3" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                </div>
+                <div id="stats">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="StatPokemon1">
+                        <p id="aquivaelstat1" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="StatPokemon2">
+                        <p id="aquivaelstat2" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="StatPokemon3">
+                        <p id="aquivaelstat3" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                </div>
+                <div id="types">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="TypePokemon1">
+                        <p id="aquivaeltype1" class="aquivalainfo">-</p>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col text-start InfoPokemon" id="TypePokemon2">
+                    <p id="aquivaeltype2" class="aquivalainfo">-</p>
+                </div>
+                </div>
+                </div>
+                <div id="expbase">
+                <div class="row">
+                    <div class="col text-start InfoPokemon" id="ExpPokemon">
+                        <p id="aquivalaexp" class="aquivalainfo"></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
